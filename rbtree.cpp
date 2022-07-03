@@ -11,10 +11,10 @@ RBTree::~RBTree() {
 }
 
 /*
-        *	Calculate the height of the tree.
+  *	Calculate the height of the tree.
 
-        * @params - void.
-        * @return - height or 0 if tree is empty.
+  * @params - void.
+  * @return - height or 0 if tree is empty.
 */
 int RBTree::height() {
   if (!root_) return 0;
@@ -188,7 +188,7 @@ void RBTree::fix_insert(RBNode* node) {
 }
 
 /*
-        *	Delete a node from the tree.
+  *	Delete a node from the tree.
 
   * @params - int the type of the data stored in the node.
   * @return - void.
@@ -229,7 +229,7 @@ void RBTree::remove(int data) {
 }
 
 /*
-  *	Delete a node from the tree.
+  *	Fix deletion.
 
   * @params - RBNode* the type of the deleted node.
   * @return - void.
@@ -355,7 +355,7 @@ void RBTree::rotate_right(RBNode* node) {
 }
 
 void RBTree::destroy_tree(RBNode* node) {
-  if (!node || node == null_node_) return;
+  if (node == null_node_) return;
 
   destroy_tree(node->left);
   destroy_tree(node->right);
